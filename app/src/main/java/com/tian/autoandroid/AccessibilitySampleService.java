@@ -36,7 +36,7 @@ public class AccessibilitySampleService extends AccessibilityService {
         // 获取启动app的intent
         Intent intent = packageManager.getLaunchIntentForPackage("com.tian.news");
         // 每次启动app应用时，但是以重新启动应用的形式打开
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         // 跳转
         startActivity(intent);
 
